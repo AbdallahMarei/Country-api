@@ -62,7 +62,7 @@ const getDetailedCountry = async (e) => {
                     </div>
                 </div>
                 <div class="border-countries">
-                    <div><b>Border Countries:</b> </div><div>${country.borders ? country.borders.map(border => `<span class="single-border-country">${border}</span>`).join("") : " No border Countries"}</div>
+                    <div style="width: 150px"><b>Border Countries:</b> </div><div>${country.borders ? country.borders.map(border => `<span class="single-border-country">${border}</span>`).join("") : " No border Countries"}</div>
                 </div>
             </div>
         </div>`)
