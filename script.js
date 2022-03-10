@@ -31,7 +31,7 @@ const displayCountries = (country) => {
 }
 
 /**
- * Whne a user clicks on a country a detailed page of that country appears
+ * When a user clicks on a country a detailed page of that country appears
  * @param {Object} e the event that occurs when clicking on any specific country
  */
 const getDetailedCountry = async (e) => {
