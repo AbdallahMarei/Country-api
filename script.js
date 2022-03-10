@@ -85,7 +85,7 @@ const searchForCountry = async (url) => {
     const res = await fetch(url);
     const result = await res.json();
     console.log(result);
-    if (result.status || result.message) {
+    if (result.message) {
         alert("Please enter a valid country name");
         const countries = await getCountries();
         console.log(countries)
