@@ -148,7 +148,7 @@ body {
   width: 80%;
 }
 .border-countries {
-    display: flex;
+  display: flex;
   margin: 0 auto;
   margin-top: 50px;
   width: 80%;
@@ -227,19 +227,19 @@ body {
   .dark-mode-container {
     font-size: 15px;
   }
-  .search-country::placeholder{
-      font-size: 17px;
+  .search-country::placeholder {
+    font-size: 17px;
   }
-  .select-filter{
-      font-size: 17px;
+  .select-filter {
+    font-size: 17px;
   }
   .country-display-container {
     grid-template-columns: 1fr;
   }
-  .border-countries{
-      flex-direction: column;
-      height: 80px;
-      justify-content: space-around;
-      overflow: hidden;
+  .border-countries {
+    flex-direction: column;
+    height: 80px;
+    justify-content: space-around;
+    overflow: hidden;
   }
 }
