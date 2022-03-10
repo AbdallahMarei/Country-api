@@ -115,9 +115,10 @@ body {
   box-shadow: var(--boxShadow);
   color: var(--textColor);
   cursor: pointer;
+  font-size: 20px;
   margin: 50px 0;
   padding: 15px;
-  width: 10%;
+  width: 15%;
 }
 .detailed-country-container {
   align-items: center;
