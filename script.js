@@ -106,8 +106,6 @@ selectRegion.addEventListener("click", function (e) {
     }
 })
 
-
-
 searchCountry.addEventListener("keyup", function (e) {
     if (e.keyCode === 13) {
         searchForCountry(`https://restcountries.com/v2/name/${e.target.value}`)
