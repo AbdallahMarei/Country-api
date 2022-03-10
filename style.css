@@ -118,7 +118,11 @@ body {
   font-size: 20px;
   margin: 50px 0;
   padding: 15px;
-  width: 15%;
+  text-align: left;
+  width: 110px;
+}
+.go-back-arrow{
+  font-size: 25px;
 }
 .detailed-country-container {
   align-items: center;
@@ -215,9 +219,6 @@ body {
     margin: 0;
     margin-top: 20px;
     width: 100%;
-  }
-  .go-back-button {
-    width: 40%;
   }
 }
 @media screen and (max-width: 585px) {

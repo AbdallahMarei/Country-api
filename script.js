@@ -39,7 +39,7 @@ const getDetailedCountry = async (e) => {
     const result = await res.json();
     console.log(result);
     mainContainer.innerHTML = "";
-    mainContainer.insertAdjacentHTML("beforeend", `<button onClick="refreshPage()" class="go-back-button">&#8592 Back</button>`)
+    mainContainer.insertAdjacentHTML("beforeend", `<button onClick="refreshPage()" class="go-back-button"><span class="go-back-arrow">&#8592</span> Back</button>`)
     result.forEach(country => {
         mainContainer.insertAdjacentHTML("beforeend", `<div class="detailed-country-container">
             <div class="detailed-country-image-container">
