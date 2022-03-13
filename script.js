@@ -101,7 +101,10 @@ const searchForCountry = async (url) => {
 }
 
 selectRegion.addEventListener("click", function (e) {
-    if (e.target.value) {
+    if(e.target.value === "All"){
+        searchForCountry(`https://restcountries.com/v2/all`);
+    }
+    else if(e.target.value) {
         searchForCountry(`https://restcountries.com/v2/region/${e.target.value}`)
     }
 })
