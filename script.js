@@ -37,10 +37,9 @@ const displayCountries = (country) => {
 const getDetailedCountry = async (e) => {
     const res = await fetch(`https://restcountries.com/v2/name/${e.currentTarget.getAttribute("name")}`)
     const result = await res.json();
-    console.log(result);
     mainContainer.innerHTML = "";
+    const country = result[0] || {};
     mainContainer.insertAdjacentHTML("beforeend", `<button onClick="refreshPage()" class="go-back-button"><span class="go-back-arrow">&#8592</span> Back</button>`)
-    result.filter((country,ind)=> ind<1).forEach(country => {
         mainContainer.insertAdjacentHTML("beforeend", `<div class="detailed-country-container">
             <div class="detailed-country-image-container">
                 <img class="detailed-country-image" src="${country.flags.png}" alt="detailed-country-flag"/>
@@ -66,7 +65,6 @@ const getDetailedCountry = async (e) => {
                 </div>
             </div>
         </div>`)
-    })
 }
 
 /**
@@ -84,11 +82,9 @@ const refreshPage = () => {
 const searchForCountry = async (url) => {
     const res = await fetch(url);
     const result = await res.json();
-    console.log(result);
     if (result.message) {
         alert("Please enter a valid country name");
         const countries = await getCountries();
-        console.log(countries)
         countries.forEach(country => {
             displayCountries(country);
         })
@@ -100,7 +96,7 @@ const searchForCountry = async (url) => {
     })
 }
 
-selectRegion.addEventListener("click", function (e) {
+selectRegion.addEventListener("change", function (e) {
     if(e.target.value === "All"){
         searchForCountry(`https://restcountries.com/v2/all`);
     }
@@ -129,7 +125,6 @@ window.onload = async () => {
         document.documentElement.classList.add("dark-mode")
     }
     const countries = await getCountries();
-    console.log(countries)
     countries.forEach(country => {
         displayCountries(country);
     })
