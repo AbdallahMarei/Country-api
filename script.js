@@ -40,7 +40,7 @@ const getDetailedCountry = async (e) => {
     console.log(result);
     mainContainer.innerHTML = "";
     mainContainer.insertAdjacentHTML("beforeend", `<button onClick="refreshPage()" class="go-back-button"><span class="go-back-arrow">&#8592</span> Back</button>`)
-    result.forEach(country => {
+    result.filter((country,ind)=> ind<1).forEach(country => {
         mainContainer.insertAdjacentHTML("beforeend", `<div class="detailed-country-container">
             <div class="detailed-country-image-container">
                 <img class="detailed-country-image" src="${country.flags.png}" alt="detailed-country-flag"/>
